@@ -66,6 +66,9 @@ First you need to create a Discord bot user, which you can do by following the i
     "channelMapping": { // Maps each Discord-channel to an IRC-channel, used to direct messages to the correct place
       "#discord": "#irc channel-password" // Add channel keys after the channel name
     },
+    "channelReMappingStatus": { // channel to send status messages to such as joining and leaving, mapped to base channel
+      "#discord": "#discord2"
+    },
     "ircOptions": { // Optional node-irc options
       "floodProtection": false, // On by default
       "floodProtectionDelay": 1000 // 500 by default
@@ -75,7 +78,7 @@ First you need to create a Discord bot user, which you can do by following the i
     // with one of these characters (commands):
     "commandCharacters": ["!", "."],
     "webhookMapping": {
-      "#discord": "id token"
+      "#discord": "id token" // https://discordapp.com/api/webhooks/{id}/{token}
     }
   }
 ]
